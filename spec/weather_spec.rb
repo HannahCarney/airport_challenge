@@ -1,8 +1,6 @@
 require 'weather'
 require 'airport'
 
-class Weather; include WeatherConditions; end
-
 describe Weather do
 
 	let(:weather) { Weather.new }
@@ -11,7 +9,7 @@ describe Weather do
 	context 'Weather Conditions' do
 
 		it 'a plane cannot take off when there is a storm brewing' do
-			random!
+		
 			if @stormy == true
 				expect(weather).to be_stormy
 			else @stormy == false
@@ -20,7 +18,7 @@ describe Weather do
 		end
 
 		it 'a plane cannot land in the middle of a storm' do
-			random!
+			
 			if @stormy == true
 			  expect(weather).to be_stormy
 		    else @stormy == false
