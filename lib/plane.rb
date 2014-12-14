@@ -9,12 +9,11 @@ class Plane
   end
 
   def takingoff plane
-    planes.delete(plane)
+    @planes.delete(plane)
   end
 
   def plane_count
     @planes.count
   end 
  
-
 end

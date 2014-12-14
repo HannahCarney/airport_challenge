@@ -8,8 +8,6 @@ class Weather
 	end
   end
 
- 
-
   def storm!
   	@sunny = false
   	@stormy = true

@@ -15,7 +15,7 @@ describe Airport do
     it 'a plane can lake off' do
     	expect(airport).to be_planes_can_take_off
     end
-end
+  end
 
   context 'traffic control' do
 
@@ -23,9 +23,5 @@ end
     	airport_full, airport_not_full = Airport.new, Airport.new
         expect(airport).not_to be_full
     end
-
-
-	
-
-end
-end
+  end
+end 
