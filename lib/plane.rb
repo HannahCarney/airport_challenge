@@ -1,19 +1,27 @@
 class Plane
 
   def initialize 
-    @planes = []
+    @flyingplanes = []
+    @landedplanes = []
   end
 
   def landing plane
-    @planes << plane
+    @landedplanes << plane
+    @flyingplanes.delete(plane)
   end
 
   def takingoff plane
-    @planes.delete(plane)
+  	@flyingplanes << plane
+    @landedplanes.delete(plane)
   end
 
-  def plane_count
-    @planes.count
+  def landed_plane_count
+    @landedplanes.count
   end 
+
+  def flying_plane_count
+  	@flyingplanes.count
+  end
  
 end
+

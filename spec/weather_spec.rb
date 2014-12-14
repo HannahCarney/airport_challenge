@@ -13,11 +13,11 @@ describe Weather do
 		
 	    if @stormy == true
 		  expect(weather).to be_stormy
-		  expect(plane.plane_count).to eq(1)
+		  expect(plane.flying_plane_count).to eq(0)
 		else @stormy == false
 		  expect(weather).not_to be_stormy
 		  plane.takingoff(plane)
-		  expect(plane.plane_count).to eq(0)
+		  expect(plane.flying_plane_count).to eq(1)
 		end
 	  end
 
@@ -25,11 +25,11 @@ describe Weather do
 			
         if @stormy == true
 		  expect(weather).to be_stormy
-		  expect(plane.plane_count).to eq(0)
+		  expect(plane.landed_pane_count).to eq(0)
 		else @stormy == false
 		  expect(weather).not_to be_stormy
 		  plane.landing(plane)
-	      expect(plane.plane_count).to eq(1)
+	      expect(plane.landed_plane_count).to eq(1)
 		end
 	  end		
 	end
