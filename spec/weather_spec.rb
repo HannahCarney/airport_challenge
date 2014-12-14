@@ -1,5 +1,6 @@
 require 'weather'
 require 'airport'
+require 'plane'
 
 describe Weather do
 
@@ -12,8 +13,11 @@ describe Weather do
 		
 			if @stormy == true
 				expect(weather).to be_stormy
+				expect(plane.plane_count).to eq(0)
 			else @stormy == false
 				expect(weather).not_to be_stormy
+				plane.landing(plane)
+				expect(plane.plane_count).to eq(1)
 			end
 		end
 
