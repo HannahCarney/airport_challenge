@@ -1,6 +1,7 @@
 class Plane
 
-  def initialize 
+  def initialize
+    @flyingplanes = true #plane cannot be created at airport
     @flyingplanes = []
     @landedplanes = []
   end
@@ -10,7 +11,25 @@ class Plane
     @flyingplanes.delete(plane)
   end
 
-  def takingoff plane
+  def landed?
+  	@landedplanes = []
+  end
+
+  def fly!
+  	@landedplanes = false
+  	@flyingplanes = true
+  end
+
+  def land!
+  	@landedplanes = true
+  	@flyingplanes = false
+  end 
+
+  def flying?
+  	@flyingplanes = true
+  end
+
+  def flying plane
   	@flyingplanes << plane
     @landedplanes.delete(plane)
   end

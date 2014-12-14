@@ -16,7 +16,7 @@ describe Weather do
 		  expect(plane.flying_plane_count).to eq(0)
 		else @stormy == false
 		  expect(weather).not_to be_stormy
-		  plane.takingoff(plane)
+		  plane.flying(plane)
 		  expect(plane.flying_plane_count).to eq(1)
 		end
 	  end
