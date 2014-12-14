@@ -43,4 +43,3 @@ class Plane
   end
  
 end
-
