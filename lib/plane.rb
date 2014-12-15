@@ -1,7 +1,5 @@
 class Plane
 
-DEFAULT_STATUS = "Flying"
-
   def initialize
   	
    planes_flying == true #plane cannot be created at airport
@@ -48,10 +46,10 @@ DEFAULT_STATUS = "Flying"
   end
 
   def planes_flying
-  	@status = puts "Flying"
+  	@status = puts "Status: Flying"
   end 
 
   def planes_landed
-  	@status = puts "Landed"
+  	@status = puts "Status: Landed"
   end
 end
