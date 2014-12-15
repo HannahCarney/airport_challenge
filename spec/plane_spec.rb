@@ -6,8 +6,8 @@ describe Plane do
 
   it 'has a flying status when created' do
   	expect(plane).to be_flying
+  	expect(plane.planes_flying).to eq("Status: Flying")
   end
-
   it 'has a flying status when in the air' do
   	plane.land!
     plane.fly!  	
@@ -25,6 +25,7 @@ describe Plane do
 
   it 'changes its status to flying after taking off' do
     plane.land!
+    expect(plane.planes_landed).to eq("Status: Landed")
     plane.fly!
     expect(plane).to be_flying
   end
