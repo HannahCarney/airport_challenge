@@ -1,6 +1,6 @@
 require 'weather'
-require 'airport'
-require 'plane'
+
+class Weather; include WeatherConditions; end
 
 describe Weather do
 
@@ -10,6 +10,7 @@ describe Weather do
 context 'Weather Conditions' do
 
   it 'a plane cannot take off when there is a storm brewing' do
+  	
     if @stormy == true
 	  expect(weather).to be_stormy
 	  expect(plane.flying_plane_count).to eq(0)

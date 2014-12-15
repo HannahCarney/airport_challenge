@@ -12,9 +12,10 @@ describe Plane do
   	plane.land!
     plane.fly!  	
   	expect(plane).to be_flying
+  	expect(plane.planes_flying).to eq("Status: Flying")
   end
 
-  it 'can take off' do
+   it 'can take off' do
   	plane.landing(plane)
   	expect(plane).to be_landed
   	expect(plane.flying_plane_count).to eq(0)
