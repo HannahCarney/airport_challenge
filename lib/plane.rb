@@ -52,4 +52,14 @@ class Plane
   def planes_landed
   	@status = ("Status: Landed")
   end
+
+  def sixplanes?
+    @flyingplanes == 6
+  end
+
+  def six plane
+  	land! if sixplanes?
+  	@landedplanes << plane
+  end
+ 
 end
