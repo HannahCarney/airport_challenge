@@ -1,7 +1,7 @@
 class Plane
 
-  def initialize
-  	
+  def initialize(options = {})
+  	@status = (:status)
    planes_flying == true #plane cannot be created at airport
     @flyingplanes = []
     @landedplanes = []
@@ -46,10 +46,10 @@ class Plane
   end
 
   def planes_flying
-  	@status = puts "Status: Flying"
+  	@status = ("Status: Flying")
   end 
 
   def planes_landed
-  	@status = puts "Status: Landed"
+  	@status = ("Status: Landed")
   end
 end
